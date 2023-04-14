@@ -1,0 +1,25 @@
+paths:
+  /api/users/:
+    get:
+      summary: Obtener info de todos los ususarios
+      tags:
+        -Users:
+      responses:
+        '200':
+          description: los user ingresaron
+        '500': 
+          description: no se puede conectar
+  components:
+    schemas:
+      User: 
+        type: object
+        properties: 
+          _id:
+            type: ObjectId
+            description: id del ususarios
+          first_name:
+            type: string
+            description: nombre del ususuario
+        example:
+        _id: ObjectId('asdasdadad')
+        fist_name: Enzo    
